@@ -5,7 +5,7 @@ import {Container} from '../../../components/Container'
 import {S} from './Main-Styled'
 import Typewriter from 'typewriter-effect'
 import {Link} from 'react-scroll'
-import mainImage from '../../../assets/images/mainImg.jpg'
+import mainImage from '../../../assets/images/mainImg.webp'
 import React from "react";
 
 export const Main: React.FC = () => {
