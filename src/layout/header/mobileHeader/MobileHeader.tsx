@@ -9,6 +9,9 @@ export const MobileHeader = () => {
     const OnBurgerBtnClick = () => {
         setMenuIsOpen(!menuIsOpen)
     }
+		const closeMenu = () => {
+				setMenuIsOpen(false)
+		}
 
 	return (
 		<StyledMobileHeader>
@@ -16,17 +19,17 @@ export const MobileHeader = () => {
 				<span></span>
 			</BurgerButton>
 			<MobileHeaderPopup isOpen={menuIsOpen}>
-				<MenuBody />
+				<MenuBody closeMenu={closeMenu}/>
 			</MobileHeaderPopup>
 		</StyledMobileHeader>
 	)
 }
 
 const StyledMobileHeader = styled.header`
-	font-weight: 600;
-	font-size: 24px;
-	line-height: 1.08333;
-	letter-spacing: 0.04em;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.08333;
+    letter-spacing: 0.04em;
     display: none;
 
     @media ${Theme.media.mobile} {

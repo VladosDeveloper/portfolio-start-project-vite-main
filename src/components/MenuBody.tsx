@@ -18,24 +18,28 @@ const NavData = [
 	},
 ]
 
-export const MenuBody: React.FC = () => {
+type MenuBodyProps = {
+		closeMenu: () => void
+}
+
+export const MenuBody: React.FC<MenuBodyProps> = ({closeMenu} ) => {
 	return (
 		<>
-			<S.NavLink smooth={true} offset={-306} to='home'>
+			<S.NavLink smooth={true} offset={-306} to='home' onClick={closeMenu}>
 				Домой
 			</S.NavLink>
 			<S.NavList>
-				{NavData.map(s => {
+				{NavData.map((s,i) => {
 					return (
-						<S.NavListItem>
-							<S.NavLink smooth={true} offset={-100} to={s.link}>
+						<S.NavListItem key={i} >
+							<S.NavLink smooth={true} offset={-100} to={s.link} onClick={closeMenu}>
 								{s.projectName}
 							</S.NavLink>
 						</S.NavListItem>
 					)
 				})}
 				<S.NavListItem>
-					<ContactButton smooth={true} offset={-100} as={Link} to='contact'>
+					<ContactButton smooth={true} offset={-100} as={Link} to='contact' onClick={closeMenu}>
 						Связаться
 					</ContactButton>
 				</S.NavListItem>

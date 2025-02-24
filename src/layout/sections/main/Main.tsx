@@ -37,7 +37,7 @@ export const Main: React.FC = () => {
 								стремлюсь к постоянному развитию как в профессиональной сфере, так и за её пределами.
 							</S.Description>
 							<ContactButton as={Link} to='contact' smooth={true} offset={-100}>
-								Contact Me
+								Связаться
 							</ContactButton>
 						</FlexWrapper>
 					</S.MainBody>

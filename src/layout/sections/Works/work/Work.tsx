@@ -16,8 +16,8 @@ export const Work: React.FC<WorkPropsType> = (props: WorkPropsType) => {
 						<S.WorkWrapper>
 								<S.Title>{props.title}</S.Title>
 								<FlexWrapper gap='10px' wrap='wrap'>
-										{props.technologies.map(t => {
-												return <S.WorksButton>{t}</S.WorksButton>
+										{props.technologies.map((t,i) => {
+												return <S.WorksButton key={i}>{t}</S.WorksButton>
 										})}
 								</FlexWrapper>
 								<S.Text>{props.text}</S.Text>
