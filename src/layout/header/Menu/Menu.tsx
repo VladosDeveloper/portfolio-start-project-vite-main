@@ -7,7 +7,7 @@ export const Menu: React.FC = () => {
 	return (
 		<S.Menu>
 			<FlexWrapper justify='space-between' alignItems='center'>
-				<MenuBody />
+				<MenuBody closeMenu={() => {}}/>
 			</FlexWrapper>
 		</S.Menu>
 	)
