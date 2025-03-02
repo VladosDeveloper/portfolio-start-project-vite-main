@@ -7,9 +7,9 @@
         "dev": "vite",
         "lint": "eslint .",
         "preview": "vite preview",
-        "build": "tsc -b && vite build",
+        "build": "tsc -b && vite build --base=./",
         "predeploy": "pnpm run build",
-        "deploy": "gh-pages -d dist"
+        "deploy": "pnpm exec gh-pages -d dist"
     },
     "dependencies": {
         "@emailjs/browser": "^4.4.1",
