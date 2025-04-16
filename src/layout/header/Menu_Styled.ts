@@ -75,7 +75,6 @@ const NavListItem = styled.li`
 
 export const S = {
 	Header,
-
 	Menu,
 	NavList,
 	NavListItem,

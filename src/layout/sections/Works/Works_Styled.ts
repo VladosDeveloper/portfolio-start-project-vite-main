@@ -4,12 +4,23 @@ import { Theme } from '../../../styles/Theme'
 const Works = styled.section`
 	margin-bottom: 154px;
 	position: relative;
+	
+	& > div {
+        max-height: 47rem;
+		height: 100%;
+		overflow: hidden;
+		transition: all 0.2s linear;
+	}
+	& > div.allContent {
+		max-height: fit-content;
+        transition: all 0.2s linear;
+	}
 `
-// const WorkButtonWrapper = styled.div`
-// 	display: flex;
-// 	justify-content: center;
-// 	margin-top: 37px;
-// `
+const WorkButtonWrapper = styled.article`
+	display: flex;
+	justify-content: center;
+	margin-top: 37px;
+`
 
 const Work = styled.article`
 	max-width: 522px;
@@ -67,4 +78,5 @@ export const S = {
 	WorksButton,
 	Title,
 	Text,
+	WorkButtonWrapper,
 }

@@ -6,41 +6,41 @@ import {AnimatePresence, motion} from 'motion/react'
 import {styled} from 'styled-components'
 
 export const GoTop: React.FC = () => {
-		const [showBtn, setShowBtn] = useState(false)
-		
-		useEffect(() => {
-				window.addEventListener('scroll', () => {
-						if (window.scrollY > 200) {
-								setShowBtn(true)
-						} else {
-								setShowBtn(false)
-						}
-				})
-		}, [])
-		
-		return (
-				<>
-						<AnimatePresence>
-								{showBtn && (
-										<motion.div
-												style={{position: 'fixed'}}
-												layout
-												initial={{bottom: '-100px', right: '20px'}}
-												animate={{bottom: '20px', right: '20px'}}
-												exit={{bottom: '-100px', right: '20px'}}
-										>
-												<StyledGoTopBtn
-														onClick={() => {
-																scroll.scrollToTop()
-														}}
-												>
-														<Icon iconSrc='top' width='20' height='20' viewbox='3 10 18 3'/>
-												</StyledGoTopBtn>
-										</motion.div>
-								)}
-						</AnimatePresence>
-				</>
-		)
+	const [showBtn, setShowBtn] = useState(false)
+	
+	useEffect(() => {
+		window.addEventListener('scroll', () => {
+			if (window.scrollY > 200) {
+				setShowBtn(true)
+			} else {
+				setShowBtn(false)
+			}
+		})
+	}, [])
+	
+	return (
+		<>
+			<AnimatePresence>
+				{showBtn && (
+					<motion.div
+						style={{position: 'fixed'}}
+						layout
+						initial={{bottom: '-100px', right: '20px'}}
+						animate={{bottom: '20px', right: '20px'}}
+						exit={{bottom: '-100px', right: '20px'}}
+					>
+						<StyledGoTopBtn
+							onClick={() => {
+								scroll.scrollToTop()
+							}}
+						>
+							<Icon iconSrc='top' width='20' height='20' viewbox='3 10 18 3'/>
+						</StyledGoTopBtn>
+					</motion.div>
+				)}
+			</AnimatePresence>
+		</>
+	)
 }
 
 const StyledGoTopBtn = styled.button`
@@ -52,6 +52,4 @@ const StyledGoTopBtn = styled.button`
     border-radius: 30px;
     cursor: pointer;
     transition: ${Theme.animations.transition};
-
-
 `
