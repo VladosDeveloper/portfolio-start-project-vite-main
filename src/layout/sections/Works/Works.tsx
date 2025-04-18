@@ -110,7 +110,7 @@ export const Works: React.FC = () => {
 			</Container>
 			<S.WorkButtonWrapper>
 				<ContactButton width='307px' onClick={showAllHandler}>
-					{showAll ? 'SHOW LESS' : 'SEE ALL PROJECTS'}
+					{showAll ? 'СКРЫТЬ' : 'ПОКАЗАТЬ ВСЕ ПРОЕКТЫ'}
 				</ContactButton>
 			</S.WorkButtonWrapper>
 		</S.Works>
