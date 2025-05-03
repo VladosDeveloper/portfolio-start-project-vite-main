@@ -63,11 +63,15 @@ const Title = styled.h3`
 `
 
 const Text = styled.p`
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 1.5;
-	letter-spacing: 0.04em;
-	margin-top: 19px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    margin-top: 19px;
+
+    & a {
+        color: #fd9d02;
+    }
 `
 
 export const S = {

@@ -8,6 +8,7 @@ import Chief from '../../../assets/chief.webp'
 import amazon from '../../../assets/amazon.webp'
 import rest from '../../../assets/rest.webp'
 import ice from '../../../assets/icecream.webp'
+import leadpage from '../../../assets/leadpage.webp'
 import {Container} from '../../../components/Container'
 import {S} from './Works_Styled'
 import React, {useState} from "react";
@@ -18,23 +19,32 @@ type WorksDataType = {
 	src: string,
 	text: string,
 	title: string,
-	technologies: string[]
+	technologies: string[],
+	link?: string,
 }
 
 const WorksData: WorksDataType[] = [
-	{
-		src: Batmen,
-		text: 'Это лендинговая страница, созданная с использованием HTML, CSS и JavaScript, посвящённая фильму' +
-			' "Бэтмен" (The Batman). Дизайн минималистичный, с тёмной цветовой гаммой, акцентом на визуальный контент и интерактивные элементы, такие как кнопки и форма. ',
-		title: 'Сайт Landing',
-		technologies: ['HTML', "CSS", "JS", 'Git']
-	},
+
 	{
 		src: rest,
 		text: 'Сайт ресторана на MERN-стеке с админ-панелью\n' +
 			'Веб-приложение для ресторана с возможностью просмотра меню, оставления комментариев и админ-панелью для управления блюдами и редактирования рецептов. Используются React, Node.js, Express и MongoDB.',
 		title: 'Ресторанный сайт на MERN',
 		technologies: ['HTML', "CSS", "TS", 'React', 'AI', 'Git']
+	},
+	{
+		src: leadpage,
+		text: `Компания занимается разработкой front-end решений — от лендингов до сложных веб-приложений с интерактивными элементами. `,
+		title: 'Сайт Landing',
+		link: ' https://lead-page-beta.vercel.app/',
+		technologies: ['HTML', "CSS", "JS", 'Git', 'Vercel']
+	},
+	{
+		src: Batmen,
+		text: 'Это лендинговая страница, созданная с использованием HTML, CSS и JavaScript, посвящённая фильму' +
+			' "Бэтмен" (The Batman). Дизайн минималистичный, с тёмной цветовой гаммой, акцентом на визуальный контент и интерактивные элементы, такие как кнопки и форма. ',
+		title: 'Сайт Landing',
+		technologies: ['HTML', "CSS", "JS", 'Git']
 	},
 	{
 		src: amazon,
@@ -102,6 +112,7 @@ export const Works: React.FC = () => {
 								text={s.text}
 								title={s.title}
 								technologies={s.technologies}
+								link={s?.link}
 							/>
 						
 						)

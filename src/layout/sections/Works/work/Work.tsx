@@ -6,7 +6,8 @@ type WorkPropsType = {
 	title: string
 	text: string
 	src: string
-	technologies: string[]
+	technologies: string[],
+	link?: string
 }
 
 export const Work: React.FC<WorkPropsType> = (props: WorkPropsType) => {
@@ -20,7 +21,7 @@ export const Work: React.FC<WorkPropsType> = (props: WorkPropsType) => {
 						return <S.WorksButton key={i}>{t}</S.WorksButton>
 					})}
 				</FlexWrapper>
-				<S.Text>{props.text}</S.Text>
+				<S.Text>{props.text} {props.link && <a href={props.link} target='_blank'>Превью сайта</a>} </S.Text>
 			</S.WorkWrapper>
 		</S.Work>
 	)
